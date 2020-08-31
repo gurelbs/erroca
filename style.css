@@ -242,6 +242,10 @@ main{
     height: 75px;
     padding: .5rem 0 1rem .5rem ;
 }
+.info-img img:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
 .info-text h3{
     color: #54595F;
     font-family: 'Assistant', sans-serif;
