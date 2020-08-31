@@ -12,7 +12,7 @@ html, body{
     top: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.99);
-    z-index: 1;
+    z-index: 10;
 }
 .header-container nav {
     padding: 1rem 1rem 0 .5rem;
@@ -31,7 +31,7 @@ html, body{
 }
 .ul-wrap ul {
     list-style: none;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 ul li{
     padding: 0 1rem;
@@ -93,8 +93,55 @@ ul li a:hover{
 
                                 /* main */
 main{
-    height: 150vh;
     position: relative;
+}
+.main-container{
+    padding: 2rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.see-brands-div,
+.shop-woman-div,
+.shop-man-div,
+.shop-under-300,
+.brand-of-the-mounth,
+.shop-now 
+{
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+.see-brands-div a,
+.shop-woman-div a,
+.shop-man-div a,
+.shop-under-300 a,
+.brand-of-the-mounth a,
+.shop-now a
+{
+    position: relative;
+    z-index: 1;
+    background: black;
+    color: white;
+    margin: 0.5rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: -10vmin;
+    font-weight: 700;
+    left: 10vmin;
+    font-size: 1vw;
+}
+.see-brands-div a{
+    left: 10vmin; 
+}
+.shop-woman-div a {
+    left: 50vmin; 
+}
+.shop-man-div a {
+    left: 130vmin; 
 }
 .first-img-banner{
     position: relative;
@@ -102,56 +149,18 @@ main{
 .first-img-banner img{
     width: 100%;
 }
-.main-container{
-    padding: 2rem 1rem;
-    position: relative;
-}
-.banner-link-container{
-    position: absolute;
-    bottom: 2.9rem;
-}
-.banner-link-container a,.secend-banner a{
-    position: relative;
-    text-decoration: none;
-    color: white;
-    font-size: 1.05em;
-    font-weight: 600;
-    margin-left: 5rem;
-}
-
-.see-brand-a::before{
-    position: relative;
-    bottom: 0;
-    content: 'see brand';
-    text-transform: uppercase;
-}
-.shop-woman-a::before{
-    position: relative;
-    content: 'shop woman';
-    text-transform: uppercase;
-    margin-left: 5rem;
-}
-.shop-man-a::before{
-    position: relative;
-    content: 'shop man';
-    text-transform: uppercase;
-    margin-left: 25rem;
-}
 .secend-banner{
     position: relative;
+}
+.shop-under-300 a{
+    left: 7vmin;
+    top: -10vmin;
 }
 .secend-banner img{
     width: 100%;
     position: relative;
-    margin: 0;
+    margin: 1rem 0;
     box-shadow: 0 1px 10px rgb(133, 133, 133);
-}
-.shop-under-300::before{
-    position: relative;
-    content: 'shop under 300';
-    text-transform: uppercase;
-    top: -3.2rem;
-    right: 1rem;
 }
 .section3{
     position: relative;
@@ -161,29 +170,14 @@ main{
     position: relative;
     width: 96.7vw;
 }
-.links-text-wrap a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.05em;
-    font-weight: 600;
+.shop-now a{
+    top: -8vmin;
 }
-.links-text-wrap .brand-of-the-mounth::before{
-    position: relative;
-    text-decoration-line: none;
-    content: 'brand of the mounth';
-    text-transform: uppercase;
-    top: -3.2rem;
-    left: 3rem;
-
-}
-.links-text-wrap .shop-now::before{
-    position: relative;
-    text-decoration-line: none;
-    content: 'brand of the mounth';
-    text-transform: uppercase;
-    top: -3.2rem;
-    left: 20rem;
-
+.brand-of-the-mounth a{
+    top: -8vmin;
+    left: 72.5vmin;
+    padding: 0;
+    margin-left: 2rem;
 }
 .split-sections{
     position: relative;
@@ -284,7 +278,7 @@ footer p{
     font-weight: bold;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .ul-wrap  {
         display: none;
     }
