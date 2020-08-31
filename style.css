@@ -2,19 +2,21 @@ html, body{
     padding: 0;
     margin: 0; 
     font-family: 'Assistant', sans-serif;
+    
 }
+
+
+                            /* nav */
 .header-container{
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 6px rgba(128, 128, 128, 0.3);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.99);
     z-index: 1;
 }
 .header-container nav {
-    padding: 1rem .5rem 1rem .5rem;
+    padding: 1rem 1rem 0 .5rem;
     display: grid;
-    place-items: center;
 }
 .logo-container{
     display: grid;
@@ -29,7 +31,7 @@ html, body{
 }
 .ul-wrap ul {
     list-style: none;
-    padding: 0 2rem 0 2rem;
+    padding: 0 1rem;
 }
 ul li{
     padding: 0 1rem;
@@ -72,7 +74,7 @@ ul li a:hover{
 
 .nav-icons{
     display: flex;
-    place-content: center;
+    justify-content: flex-end;
     place-items: center;
     min-width: 20vw;
 }
@@ -87,42 +89,204 @@ ul li a:hover{
 .hearn-icon{
     font-style: normal;
 }
+
+
+                                /* main */
 main{
     height: 150vh;
     position: relative;
 }
+.first-img-banner{
+    position: relative;
+}
 .first-img-banner img{
-    width: 100%;
+    max-width: 100%;
 }
 .main-container{
     padding: 2rem 1rem;
     position: relative;
 }
 .banner-link-container{
-    position: relative;
-    top: -4.3rem;
+    position: absolute;
+    bottom: 2.9rem;
 }
 .banner-link-container a,.secend-banner a{
+    position: relative;
     text-decoration: none;
     color: white;
-    font-size: 1.05rem;
+    font-size: 1.05em;
     font-weight: 600;
-    padding: 5.5rem;
+    margin-left: 5rem;
 }
-.big-a-padding{
+
+.see-brand-a::before{
     position: relative;
-    margin-left: 16rem;
+    bottom: 0;
+    content: 'see brand';
+    text-transform: uppercase;
+}
+.shop-woman-a::before{
+    position: relative;
+    content: 'shop woman';
+    text-transform: uppercase;
+    margin-left: 5rem;
+}
+.shop-man-a::before{
+    position: relative;
+    content: 'shop man';
+    text-transform: uppercase;
+    margin-left: 25rem;
 }
 .secend-banner{
     position: relative;
 }
 .secend-banner img{
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    box-shadow: 0 1px 10px rgb(133, 133, 133);
+}
+.shop-under-300::before{
+    position: relative;
+    content: 'shop under 300';
+    text-transform: uppercase;
+    top: -3.2rem;
+    right: 1rem;
+}
+.section3{
+    position: relative;
+    display: flex;
+}
+.section3 div img{
+    position: relative;
+    max-width: 100%;
+    min-width: 100%;
+}
+.links-text-wrap a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.05em;
+    font-weight: 600;
+}
+.links-text-wrap .brand-of-the-mounth::before{
+    position: relative;
+    text-decoration-line: none;
+    content: 'brand of the mounth';
+    text-transform: uppercase;
+    top: -3.2rem;
+    left: 3rem;
+
+}
+.links-text-wrap .shop-now::before{
+    position: relative;
+    text-decoration-line: none;
+    content: 'brand of the mounth';
+    text-transform: uppercase;
+    top: -3.2rem;
+    left: 20rem;
+
+}
+.split-sections{
+    position: relative;
+    display: flex;
     width: 100%;
-    position: relative;
-    margin: 1rem 0;
-    box-shadow: 0 1px 4px rgb(133, 133, 133);
+    justify-content: space-between;
+    margin-top: 1rem;
+
 }
-.a-padding-sec-banner{
+.split-sections div{
+    width: 15vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
     position: relative;
-    top: -4.3rem;
 }
+.split-sections div img{
+    max-width: 100%;
+}
+
+.img-text::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    word-wrap: break-word;
+    padding: 0 10px;
+    overflow: hidden;
+    color: white;
+    visibility: hidden;
+    transition: .25s ease;
+    transform: translateY(50%);
+    direction: rtl;
+    animation-direction: alternate-reverse;
+}
+.img-text:hover:after{
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.feature-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3rem;
+    direction: rtl;
+}
+.info{
+    max-width: 33.334%;
+    padding: 0;
+    margin: 0;
+}
+.feature-section .info{
+    display: flex;
+}
+.info .info-img img{
+    width: 75px;
+    height: 75px;
+    padding: .5rem 0 1rem .5rem ;
+}
+.info-text h3{
+    color: #54595F;
+    font-family: 'Assistant', sans-serif;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.info-text p{
+    font-family: "Assistant", Sans-serif;
+    font-size: 1em;
+    color: #54595F;
+    word-spacing: 1px;
+    line-height: 1.4em;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+footer{
+    direction: rtl;
+    padding: 1rem;
+    max-width: 40%;
+}
+footer div a{
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    padding: 0 .5rem;
+    font-weight: 700;
+    font-size: .8rem;
+}
+footer div a:hover{
+    text-decoration: none;
+    color: gray;
+}
+footer p{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .ul-wrap  {
+        display: none;
+    }
+  }
